@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Front-end Smart Fit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto Front-end desenvolvido como parte de uma avaliação de habilidades técnicas para o cargo de Front-end na Smart Fit.
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A Smart Fit, empresa do segmento de fitness, passou por diversas mudanças durante a pandemia. Como resultado, tornou-se necessário desenvolver uma página para buscar unidades abertas ou fechadas para consulta e reserva.
 
-## Expanding the ESLint configuration
+Optou-se por não disponibilizar a API original de busca de unidades abertas/fechadas para este teste. O objetivo é que o candidato implemente as funcionalidades descritas abaixo, seguindo as regras de negócio definidas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Funcionalidades
 
-- Configure the top-level `parserOptions` property like this:
+- Carregar unidades através do arquivo JSON `locations.json` com método GET.
+- Buscar todas as unidades.
+- Buscar unidades com filtros.
+- Mostrar previsão de resultados encontrados.
+- Mostrar unidades ao buscar.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Regras de Negócio
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Filtrar unidades abertas ou fechadas.
+- Filtrar unidades por período de funcionamento.
+- Mostrar uma mensagem ao usuário "Nenhuma unidade encontrada" caso não haja resultados.
+- Validar para mostrar ícones corretos de acordo com o status.
+
+## Componentes Macro
+
+- Formulário de busca com filtros.
+- Legenda.
+- Lista de unidades.
+
+## Materiais Disponíveis
+
+Em `_material` você encontrará:
+
+- Layout (mobile e desktop).
+- Textos.
+- Cores.
+- Imagens.
+- Fontes.
